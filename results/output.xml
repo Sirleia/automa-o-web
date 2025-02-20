@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.2 (Python 3.13.1 on win32)" generated="2025-02-19T11:55:57.680469" rpa="false" schemaversion="5">
+<suite id="s1" name="Workflow" source="C:\Users\sirleia.marciniak\Documents\pessoal\workflow">
+<suite id="s1-s1" name="Tests" source="C:\Users\sirleia.marciniak\Documents\pessoal\workflow\tests">
+<suite id="s1-s1-s1" name="Suites" source="C:\Users\sirleia.marciniak\Documents\pessoal\workflow\tests\Suites">
+<suite id="s1-s1-s1-s1" name="Test cadastro cliente" source="C:\Users\sirleia.marciniak\Documents\pessoal\workflow\tests\Suites\Test_cadastro_cliente.robot">
+<test id="s1-s1-s1-s1-t1" name="Cenário de teste 02: Cadastrando usuário com dados validos" line="16">
+<kw name="Abrir navegador" owner="Hooks" type="SETUP">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2025-02-19T11:55:58.022561" level="INFO">Opening browser 'chrome' to base url 'https://automationpratice.com.br/'.</msg>
+<arg>${URL}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2025-02-19T11:55:58.021792" elapsed="1.941721"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2025-02-19T11:55:59.963985" elapsed="0.441185"/>
+</kw>
+<status status="PASS" start="2025-02-19T11:55:58.020059" elapsed="2.385690"/>
+</kw>
+<kw name="Deve conter o title title do site Site" owner="Page_cadastro_cliente">
+<kw name="Title Should Be" owner="SeleniumLibrary">
+<msg time="2025-02-19T11:56:00.416268" level="INFO">Page title is 'QAZANDO Shop E-Commerce'.</msg>
+<arg>QAZANDO Shop E-Commerce</arg>
+<doc>Verifies that the current page title equals ``title``.</doc>
+<status status="PASS" start="2025-02-19T11:56:00.410071" elapsed="0.007495"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-02-19T11:56:03.419472" level="INFO">Slept 3 seconds.</msg>
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-02-19T11:56:00.418129" elapsed="3.002365"/>
+</kw>
+<status status="PASS" start="2025-02-19T11:56:00.408726" elapsed="3.012586"/>
+</kw>
+<kw name="Aguardar o elemento de texto clicavel esteja visível" owner="Page_cadastro_cliente">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>xpath=//*[@id="top_header"]/div/div/div[2]/div/ul/li[2]/a</arg>
+<arg>10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-02-19T11:56:03.424730" elapsed="0.035431"/>
+</kw>
+<status status="PASS" start="2025-02-19T11:56:03.423020" elapsed="0.037364"/>
+</kw>
+<kw name="Deve poder clicar no texto clicavel {cadastro}" owner="Page_cadastro_cliente">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-02-19T11:56:03.461636" level="INFO">Clicking element 'xpath=//*[@id="top_header"]/div/div/div[2]/div/ul/li[2]/a'.</msg>
+<arg>xpath=//*[@id="top_header"]/div/div/div[2]/div/ul/li[2]/a</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-02-19T11:56:03.461317" elapsed="0.092514"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-02-19T11:56:06.555906" level="INFO">Slept 3 seconds.</msg>
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-02-19T11:56:03.554368" elapsed="3.002482"/>
+</kw>
+<status status="PASS" start="2025-02-19T11:56:03.460830" elapsed="3.096400"/>
+</kw>
+<kw name="Validando se a tela é a correta Titulo da tela cadastro_de_usuario" owner="Page_cadastro_cliente">
+<kw name="Wait Until Element Contains" owner="SeleniumLibrary">
+<arg>xpath=//*[@id="login_area"]/div/div/div/div/h3</arg>
+<arg>Cadastro de usuário</arg>
+<doc>Waits until the element ``locator`` contains ``text``.</doc>
+<status status="PASS" start="2025-02-19T11:56:06.559035" elapsed="0.040122"/>
+</kw>
+<status status="PASS" start="2025-02-19T11:56:06.558096" elapsed="0.041264"/>
+</kw>
+<kw name="Aguardar o elemento do campo Nome ficar visível" owner="Page_cadastro_cliente">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>xpath=//*[@id="user"]</arg>
+<arg>10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-02-19T11:56:06.600687" elapsed="0.025725"/>
+</kw>
+<status status="PASS" start="2025-02-19T11:56:06.599914" elapsed="0.026793"/>
+</kw>
+<kw name="Deve poder digitar no campo Nome" owner="Page_cadastro_cliente">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-02-19T11:56:06.628733" level="INFO">Typing text 'Sirleia Teste automação' into text field 'xpath=//*[@id="user"]'.</msg>
+<arg>xpath=//*[@id="user"]</arg>
+<arg>Sirleia Teste automação</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-02-19T11:56:06.628360" elapsed="0.128424"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-02-19T11:56:09.758332" level="INFO">Slept 3 seconds.</msg>
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-02-19T11:56:06.757484" elapsed="3.001411"/>
+</kw>
+<status status="PASS" start="2025-02-19T11:56:06.627246" elapsed="3.132015"/>
+</kw>
+<kw name="Deve poder digitar no campo E-mail" owner="Page_cadastro_cliente">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-02-19T11:56:09.761872" level="INFO">Typing text 'sirleiadaiane@yahoo.com.br' into text field 'xpath=//*[@id="email"]'.</msg>
+<arg>xpath=//*[@id="email"]</arg>
+<arg>sirleiadaiane@yahoo.com.br</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-02-19T11:56:09.761140" elapsed="0.120261"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-02-19T11:56:12.882946" level="INFO">Slept 3 seconds.</msg>
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-02-19T11:56:09.881713" elapsed="3.001674"/>
+</kw>
+<status status="PASS" start="2025-02-19T11:56:09.760161" elapsed="3.123529"/>
+</kw>
+<kw name="Deve poder digitar no campo Senha" owner="Page_cadastro_cliente">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-02-19T11:56:12.885888" level="INFO">Typing text 'sirleiateste123456' into text field 'xpath=//*[@id="password"]'.</msg>
+<arg>xpath=//*[@id="password"]</arg>
+<arg>sirleiateste123456</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-02-19T11:56:12.885275" elapsed="0.116055"/>
+</kw>
+<kw name="Scroll Element Into View" owner="SeleniumLibrary">
+<arg>xpath=//*[@id="btnRegister"]</arg>
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<status status="PASS" start="2025-02-19T11:56:13.001666" elapsed="0.290636"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-02-19T11:56:16.293447" level="INFO">Slept 3 seconds.</msg>
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-02-19T11:56:13.292694" elapsed="3.001273"/>
+</kw>
+<status status="PASS" start="2025-02-19T11:56:12.884429" elapsed="3.409787"/>
+</kw>
+<kw name="Deve poder clicar no botão {cadastrar}" owner="Page_cadastro_cliente">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-02-19T11:56:16.296255" level="INFO">Clicking element 'xpath=//*[@id="btnRegister"]'.</msg>
+<arg>xpath=//*[@id="btnRegister"]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-02-19T11:56:16.295825" elapsed="0.099592"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-02-19T11:56:19.396826" level="INFO">Slept 3 seconds.</msg>
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-02-19T11:56:16.395823" elapsed="3.001538"/>
+</kw>
+<status status="PASS" start="2025-02-19T11:56:16.295099" elapsed="3.102632"/>
+</kw>
+<kw name="Deve validar o sucesso do cadastro" owner="Page_cadastro_cliente">
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2025-02-19T11:56:19.423863" level="INFO">${COMPARAR} = Cadastro realizado!</msg>
+<var>${COMPARAR}</var>
+<arg>xpath=//*[@id="swal2-title"]</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-02-19T11:56:19.399720" elapsed="0.024502"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2025-02-19T11:56:19.425437" level="INFO">Cadastro realizado!</msg>
+<arg>${COMPARAR}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2025-02-19T11:56:19.424700" elapsed="0.000992"/>
+</kw>
+<kw name="Should Be Equal As Strings" owner="BuiltIn">
+<arg>${texto_cadastr_sucesso}</arg>
+<arg>${COMPARAR}</arg>
+<doc>Fails if objects are unequal after converting them to strings.</doc>
+<status status="PASS" start="2025-02-19T11:56:19.426010" elapsed="0.000658"/>
+</kw>
+<status status="PASS" start="2025-02-19T11:56:19.398685" elapsed="0.028199"/>
+</kw>
+<kw name="Fechar navegador" owner="Hooks" type="TEARDOWN">
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2025-02-19T11:56:19.428156" elapsed="2.263480"/>
+</kw>
+<status status="PASS" start="2025-02-19T11:56:19.427518" elapsed="2.264661"/>
+</kw>
+<tag>Cadastro_usuario_dados_validos</tag>
+<status status="PASS" start="2025-02-19T11:55:58.018420" elapsed="23.674528"/>
+</test>
+<doc>Aqui ficarão os steps da aplicação</doc>
+<status status="PASS" start="2025-02-19T11:55:57.726740" elapsed="23.970735"/>
+</suite>
+<status status="PASS" start="2025-02-19T11:55:57.722896" elapsed="23.978824"/>
+</suite>
+<status status="PASS" start="2025-02-19T11:55:57.719828" elapsed="23.985063"/>
+</suite>
+<status status="PASS" start="2025-02-19T11:55:57.691003" elapsed="24.016846"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+<stat pass="1" fail="0" skip="0">Cadastro_usuario_dados_validos</stat>
+</tag>
+<suite>
+<stat name="Workflow" id="s1" pass="1" fail="0" skip="0">Workflow</stat>
+<stat name="Tests" id="s1-s1" pass="1" fail="0" skip="0">Workflow.Tests</stat>
+<stat name="Suites" id="s1-s1-s1" pass="1" fail="0" skip="0">Workflow.Tests.Suites</stat>
+<stat name="Test cadastro cliente" id="s1-s1-s1-s1" pass="1" fail="0" skip="0">Workflow.Tests.Suites.Test cadastro cliente</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
