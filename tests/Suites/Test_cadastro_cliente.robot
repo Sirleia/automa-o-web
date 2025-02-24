@@ -33,5 +33,5 @@ Cenário 3: Acessando a tela de login
 	Deve validar campo "login"
 	Digitar e-mail
 	Digitar senha
-	#Clicar em lembrar de mim
+	Clicar em lembrar de mim
 	Clicar em Login

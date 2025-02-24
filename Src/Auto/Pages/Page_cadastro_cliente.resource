@@ -67,17 +67,17 @@ Deve validar campo "login"
     Wait Until Element Is Visible     xpath=//*[@id="user"]    10s
 
 Digitar e-mail
-    Input Text    xpath=//*[@id="user"]    teste@teste.com.br
-    Scroll Element Into View    xpath=//*[@id="password"]       
+    Input Text    xpath=//*[@id="user"]    teste@teste.com.br 
+    Scroll Element Into View    xpath=//*[@id="password"]   
     Sleep    3s
 
 Digitar senha
     Input text    xpath=//*[@id="password"]    123456
     Sleep    3s 
         
-#Clicar em lembrar de mim
- #   Click Button    xpath=//*[@id="materialUnchecked"]    5s
-
+Clicar em lembrar de mim
+    Click Element    xpath=//*[@id="materialUnchecked"]
+    Sleep    3s
 Clicar em Login    
     Click Element    xpath=//*[@id="btnLogin"]
     Sleep    5s
