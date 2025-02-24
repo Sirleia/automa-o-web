@@ -25,3 +25,13 @@ Cenário de teste 02: Cadastrando usuário com dados validos
 	Deve poder digitar no campo Senha
 	Deve poder clicar no botão {cadastrar}
 	Deve validar o sucesso do cadastro
+
+Cenário 3: Acessando a tela de login
+    Deve conter o title title do site Site
+	Aguardar o elemento de texto login
+    Deve clicar no campo Login
+	Deve validar campo "login"
+	Digitar e-mail
+	Digitar senha
+	#Clicar em lembrar de mim
+	Clicar em Login

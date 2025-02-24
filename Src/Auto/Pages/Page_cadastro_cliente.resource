@@ -50,4 +50,36 @@ Deve validar o sucesso do cadastro
    #${COMPARAR BEM VINDO}    Get Text    xpath=//*[@id="swal2-title"]
    #Log    ${COMPARAR BEM VINDO}
    #Should Be Equal As Strings    ${COMPARAR BEM VINDO}    ${NOME DO USUARIO}        
-   ## falta descrever o botão ok e e validar a pagina que ficou
+   Click Element    xpath=/html/body/div[2]/div/div[6]/button[1]     
+   Sleep    3s
+
+    ########### Cenario 3
+Aguardar o elemento de texto login
+    Wait Until Element Is Visible    //*[@id="top_header"]/div/div/div[2]/div/ul/li[1]/a    5s
+
+Deve clicar no campo Login
+    Click Element    //*[@id="top_header"]/div/div/div[2]/div/ul/li[1]/a
+
+Deve validar campo "login"
+    Wait Until Element Contains    xpath=//*[@id="login_area"]/div/div/div/div/h3    Login
+    
+ Aguardar campo e-mail visivel
+    Wait Until Element Is Visible     xpath=//*[@id="user"]    10s
+
+Digitar e-mail
+    Input Text    xpath=//*[@id="user"]    teste@teste.com.br
+    Scroll Element Into View    xpath=//*[@id="password"]       
+    Sleep    3s
+
+Digitar senha
+    Input text    xpath=//*[@id="password"]    123456
+    Sleep    3s 
+        
+#Clicar em lembrar de mim
+ #   Click Button    xpath=//*[@id="materialUnchecked"]    5s
+
+Clicar em Login    
+    Click Element    xpath=//*[@id="btnLogin"]
+    Sleep    5s
+
+
