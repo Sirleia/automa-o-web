@@ -45,13 +45,10 @@ Deve poder clicar no botão {cadastrar}
 Deve validar o sucesso do cadastro
     ${COMPARAR}    Get Text    xpath=//*[@id="swal2-title"]
     Log    ${COMPARAR}     
-    Should Be Equal As Strings    ${texto_cadastr_sucesso}    ${COMPARAR}
-#### TEm uma div class como se fosse dentro do h2. como fazer?
-   #${COMPARAR BEM VINDO}    Get Text    xpath=//*[@id="swal2-title"]
-   #Log    ${COMPARAR BEM VINDO}
-   #Should Be Equal As Strings    ${COMPARAR BEM VINDO}    ${NOME DO USUARIO}        
-   Click Element    xpath=/html/body/div[2]/div/div[6]/button[1]     
-   Sleep    3s
+    Should Be Equal As Strings    ${texto_cadastr_sucesso}    ${COMPARAR}       
+    Wait Until Element Contains    xpath=//*[@id="swal2-html-container"]    Bem-vindo Sirleia Teste automação     
+    Click Element    xpath=/html/body/div[2]/div/div[6]/button[1]     
+    Sleep    3s
 
     ########### Cenario 3
 Aguardar o elemento de texto login
